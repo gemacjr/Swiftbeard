@@ -8,7 +8,20 @@
 </head>
 <body>
 
-<%= yield %>
+	<%= render partial: "shared/header" %>
+	<%= render partial: "shared/message" %>
+
+	<main>
+	  <div class="container">
+			<%= yield %>
+		</div>
+	</main>
+
+  	<%= render partial: "shared/footer" %>
 
 </body>
+<script>
+	$(".button-collapse").sideNav();
+	$(".dropdown-button").dropdown();
+</script>
 </html>
